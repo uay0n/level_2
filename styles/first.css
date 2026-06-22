@@ -1,0 +1,38 @@
+/* 선택자 {속성:값;} */
+h1 {color: red;}
+p {background-color: rgb(255, 135, 229); color: rgb(255, 255, 255);}
+h2 {background-color: gold; color: darkorange;}
+dl {background-color: lightpink;}
+dt {background-color: orchid; color: rgb(255, 255, 255);}
+dd {background-color: aquamarine; color: rgb(0, 0, 147);}
+ul {background-color: rgb(255, 202, 233);}
+ol {background-color: aqua;}
+li {color: rgb(63, 63, 63);}
+/* 태그 순서 생각하며 똑같은 선택자 또 쓰지 않기 */
+header {background-color: cornflowerblue;}
+a {background-color: crimson;}
+/* 부모가 상속된 color가 a에 적용되지 않는 이유 */
+/* 실제론 적용됐으나 a태그에 기본적으로 내장된 파랑색 때문에 상속된 값을 덮어서 보이지 않는다. */
+/* a태그는 블록, 인라인 모두 가능하나 css상으론 처음 a태그가 발표도ㅒㅆ을 때의 초기모습(인라인)을 가지고 있다. (나중에 블록형태로 css도 변경가능) */
+h3 {background-color: darkorchid;}
+em {background-color: blue;}
+/* 태그의 인라인, 블록 유형에 따라 적용 결과가 다를 수 있다. */
+/* 블록태그 h3은 배경색이 1행 전체에 적용되고 em은 인라인이라서 em이 가진 글자만큼만 적용된다. */
+section {background-color: antiquewhite;}
+h4 {background-color: aquamarine; color: darkorchid;}
+span {background-color: chartreuse; color: deeppink;}
+/* 태그가 2개 이상 반복될 때 구분하는 클래스선택자 */
+.blog {background-color: rgb(255, 232, 82);}
+.study {background-color: rgb(255, 193, 170);}
+.study > .first {background-color: coral; color: black;}
+.study > .second {background-color: darksalmon;}
+/* 디자인하는 선택자에 부모가 있으면 선택자에 부모까지 포함해서 작성해야한다.자식선택자 */
+.study > li {background-color: #ccccff;}
+/* li {} 잘못된 경우(부모가 있는데 부모 안 적음 */
+.study > li > del {color: chocolate;}
+footer {background-color: rgb(238, 255, 0);}
+footer > address {color: rgb(68, 68, 68);}
+.copy {background-color: rgb(89, 90, 73); color: black;}
+footer > p {background-color: aqua;}
+footer > p > span {background-color: black;}
+footer > p > em {background-color: black; color: deeppink;}
