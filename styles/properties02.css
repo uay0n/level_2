@@ -1,0 +1,44 @@
+/* properties02.css */
+.movie {
+    width:600px;
+    height: max-content;
+    background-color: #FFFF;
+    border:2px solid #FF5D5D;
+    border-radius:10px;
+    padding:50px;
+    
+}
+.movie > .title {
+    font-family: 'Noto Sans KR' , '바탕체';
+    font-size: 2.5em;
+    font-weight: 600;
+    line-height:1.5;
+    letter-spacing: 0.03em;
+    color: #423B3B;
+}
+.movie > .series {
+    font-family: 'Noto Sans KR' , '바탕체';
+    font-size: 1.813em;
+    font-weight: 100;
+    color: #FF3B00;
+    padding: 0 0 40px 0;
+}
+.movie > .famous_line {
+    padding: 20px 0 20px 0;
+
+}
+.movie > .famous_line > .first {
+    font-family: 'Noto Sans KR' , '바탕체';
+    font-size: 1em;
+    font-weight: 500;
+    color: #3A296C;
+    padding: 0 10px 0 0;
+    line-height:0.9;
+}
+.movie > .famous_line > .second {
+    font-family: 'Noto Sans KR' , '바탕체' ;
+    font-size : 0.813em;
+    font-weight: 800;
+    color: #7FAA2D;
+    line-height: 1.2;
+}
