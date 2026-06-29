@@ -1,0 +1,56 @@
+/* css */
+.box {width:300px; height:400px;}
+.box > h1 { }
+.box > p { }
+.box > * {
+    border-width: 1px;
+    border-style: solid;
+    width:100px; height:100px;
+} /* class 박스의 모든(*) 자식들 - 에스터리스크 */
+/* ==========================개별클래스 */
+.box1 {
+    background-color: lightblue;
+    /* 자식(item)을 정렬하고 싶을 땐 부모(container)에게 명령 */
+    display: flex;
+    /* flex만 넣었을때 기본값 : 메인축(수평), 줄바꿈불가 */
+    /* 1. 메인축 *방향속성 */
+    /* flex-direction:row 아이템의 메인축을 수평으로 방향맞추기 */
+    /* flex-direction: row-reverse; */
+    /* 2. 줄바꿈 속성 (기본값:nowrap) */
+    /* nowrap인 경우 px로 고정값 설정한 대상이 자동으로 가반형(%)가 될 수 있다. */
+    /* flex-wrap: wrap; */
+    /* 3. 메인축 *방향속성+줄바꿈속성 묶음속성 */
+    flex-flow: row nowrap;
+    /* 4. 메인축(수평, 수직)에 남은 공간에 맞춘 정렬속성 *정렬속성 */
+    justify-content: space-around;
+    /* 5. 교차축(수평, 수직)에 남은 공간에 맞춘 2줄 이상 정렬속성 */
+    align-content: space-around;
+    /* 6. 교차축(수평, 수직)에 남은 공간에 맞춘 1줄 정렬속성 */
+    align-items: flex-start;
+    /* align-content와 align-item은 flex의 줄바꿈속성에 따라 둘 중 1개만 작성한다. */
+}
+.box2 {
+    background-color: pink;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+.box1 > h1 {border-color: rgb(6, 41, 87);}
+.box1 > p {border-color:rgb(138, 160, 172)}
+.box2 > h1 {border-color:crimson}
+.box2 > p {border-color:rgb(201, 137, 171)}
+.box9 {
+    height: 400px; width: 300px;
+    background-color: #ebfb82;
+    display: flex;
+    /* flex-direction: row; */
+    /* flex-wrap: wrap-reverse; */
+    flex-flow: row wrap;
+    justify-content : flex-start;
+    align-content: flex-end;
+}
+.box9 > p {
+    height: 90px; width: 90px;
+    border: 1px solid #5f5f5f;
+}
