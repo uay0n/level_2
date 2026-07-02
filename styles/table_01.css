@@ -1,0 +1,142 @@
+/* table_01.css */
+/* 공통 */
+/* 개별 */
+body {font-family: 'Noto Sans KR';}
+h1 {
+    font-size: 1.2em;
+    border-bottom: 1px dashed #333;
+    padding-bottom: 8px;
+}
+table {
+    margin: 8px 0 8px 0
+}
+#t1 {
+    border: 1px solid #000;
+
+}
+#t2 {border-top: 4px solid #f00;}
+#t2 tr td { /* t2 td로도 사용 가능하나 생략을 너무 하는 건 안 좋음 */
+    /* 아이디t2요소 안 tr 요소 안 td를 선택한다. */ /* 자식선택자(>)는 특정부모 안자식,  자식요소가 2개 이상 중복될때 자식만 선택하기 위해서 사용한다. */
+    border: 2px solid #00f;
+}
+#t3 {border-bottom:3px solid #f00;}
+#t3 tr:nth-child(1) th {
+    background-color: #e9fd4f;
+}
+#t3 tr:nth-child(1) td:nth-child(2) {
+    background-color: #f397df;
+}
+#t3 tr:nth-child(2) td:nth-child(1) {
+    background-color: #17f75b;
+}
+#t3 tr:nth-child(2) td:nth-child(3) {
+    background-color: aqua;
+}
+#t3 tr * { /* (*) 모든 태그에 적용하겠다 */
+    border: 1px solid #000
+}
+/* #t3 td {padding: 10px;} */
+/* td > 내용 열 == p 내용 단락 */
+#book_stock {
+    background-color: #F2F2F2;
+    border-radius : 25px;
+    overflow: hidden;
+}
+#book_stock tr * { /* 애스터리스크 tr의 자식으로 td,th만 올 수 있다. */ 
+    padding: 16px 0;
+}
+#book_stock tr th {
+    width: 100px;
+    background-color: #ff0066;
+    color: white;
+}
+#book_stock tr th:nth-child(1) {width: 250px;}
+#book_stock tr td {
+    text-align: center; /* 수평정렬 */
+}
+/* (아래)선택자 해석 : 각 행(tr)의 첫번째(nth) td 선택 */
+#book_stock tr td:nth-child(1) {
+    text-align: left;
+    padding-left: 16px;
+}
+#book_stock tr:nth-child(3) {
+    border: 2px solid  #ff0066;
+}
+#book_stock tr:nth-child(3) td {
+    color: #ff0066;
+}
+/* 지역별 매출 현황 */
+.area_wrap {width: 750px; margin-top: 20px;}
+.area_wrap .sale_title {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 22px;
+
+}
+.area_wrap .sale_title * {font-family: Noto Sans KR;}
+.area_wrap .sale_title > h2 {}
+.area_wrap .sale_title > p {}
+.area_wrap #sale_status {background-color: #f5f5f5;}
+.area_wrap #sale_status * {font-family: Noto Sans KR;}
+.area_wrap #sale_status  tr {}
+.area_wrap #sale_status  tr  th {
+    width: 150px; /* 같은 수직방향 다른행 td까지 동시 적용 */
+    height: 35px; /* 같은 수평방향 th 적용 */
+    font-size: 1.125em;
+    font-weight: 600;
+}
+.area_wrap #sale_status tr:nth-child(1) {
+    border: 2px solid #000;
+    border-left: 0; border-right: 0;
+
+}
+.area_wrap #sale_status  tr  td {
+    padding: 16px 0;
+    text-align: center;
+    font-size: 0.875em;
+}
+.area_wrap #sale_status tr:nth-child(5) {background-color: #A8D18D;}
+.area_wrap .src {
+    text-align:end;
+    font-family: Noto Sans KR;
+}
+/* 행&열합치기 연습용 */
+#t4 * {
+    border: 1px solid #000;
+    text-align: center;
+    padding: 6px;
+}
+#t4  {margin: 24px;}
+/* 선불요금제 */
+h1
+#pay {width: 1100px;}
+#pay tr {
+    text-align: center;
+}
+#pay tr:nth-child(2) {background-color: #f2f2f2;} 
+#pay tr td:nth-child(1) {width: 250px;}
+#pay tr td:nth-child(3) {width:350px}
+#pay tr td:nth-child(5) {width:200px}
+#pay tr th {
+    padding: 20px; 
+    background-color: #f2f2f2;
+}
+#pay tr:nth-child(1) {
+    border-bottom: 1px dashed #000;
+    border-top: 2px solid #000;
+}
+#pay tr th:nth-child(1) {border-bottom: 2px solid gray;}
+#pay tr td {border-bottom: 2px solid gray;}
+#pay tr td strong {color: #ff0066; font-weight: 800;}
+#pay tr:nth-child(2) * {font-weight: 800;}
+#pay tr td {
+    padding:20px 0;
+    font-weight: 700;
+}
+#pay tr th h2 {font-size: 1em; font-weight: 800; margin-bottom: 10px;}
+#pay tr th p {font-size: 0.75em; color: gray;}
+#pay tr td span {
+    font-size: 0.75em; 
+    color: gray; 
+    margin-top: 0;
+}
